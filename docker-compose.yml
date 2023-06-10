@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_PASSWORD: "postgrespw"
+    volumes:
+      - trivia-data:/var/lib/postgresql
+    ports:
+      - 5432:5432
+    restart: always
+
+  task_trivia:
+    image: bobako/task_trivia
+    environment:
+      - USE_ENV=true
+      - DATABASE_URI=postgresql+psycopg2://postgres:postgrespw@postgres:5432
+      - SITE_PORT=5000
+    ports:
+      - "5000:5000"
+    restart: always
+
+volumes:
+  trivia-data:
