@@ -40,6 +40,8 @@ docker run task_wav
 ```
 docker run task_trivia SITE_PORT=80
 ```
+
+
 ### Docker-compose
 В корневой директории проекта содержится файл docker-compose.yml, где заданы параметра проекта и контейнера с postgresql. Непосредственно сам образ проекта там подтягивается с докерхаба. Запустить оба контейнера можно с помощью команды
 ```
@@ -54,3 +56,5 @@ DATABASE_URI=postgresql+psycopg2://postgres:postgrespw@postgres:5432
 ```
 
  ## Примеры использования
+ ![Screenshot from 2023-06-10 17-31-21](https://github.com/Bobako/task_trivia/assets/52820434/22f72ebc-e412-431e-8f67-0e1bbfb9d59c)
+
